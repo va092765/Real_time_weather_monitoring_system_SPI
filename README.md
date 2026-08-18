@@ -59,7 +59,7 @@ Since the LPC2129 has no built-in ADC, all analog sensors are read through an ex
 - IR sensor (digital output)
 - 16x2 character LCD
 - SIM800C GSM module
-- Buzzer / LED (local alert indicator)
+- LED (local alert indicator)
 
 ## Pin Mapping
 
