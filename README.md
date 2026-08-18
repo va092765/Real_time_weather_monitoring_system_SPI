@@ -10,13 +10,14 @@ flowchart TB
         LM35["LM35\nTemperature Sensor"]
         SOIL["Soil Moisture\nSensor"]
         LDR["LDR\nLight Sensor"]
+        FC-37["RAIN Sensor\n"]
     end
-
-    IR["RAIN Sensor\n"]
 
     LM35 -->|CH0| ADC["MCP3204\n12-bit SPI ADC"]
     SOIL -->|CH2| ADC
     LDR -->|CH3| ADC
+    FC-37 -->|CH1| ADC
+
 
     ADC <-->|SPI0: SCK / MISO / MOSI / CS| MCU["LPC2129\nARM7 Microcontroller"]
     IR -->|GPIO P0.17| MCU
@@ -41,11 +42,11 @@ The system reads four environmental parameters and reacts to abnormal conditions
 | Temperature | LM35 | MCP3204 CH0 (analog) | > 40°C |
 | Soil Moisture | Resistive soil sensor | MCP3204 CH2 (analog) | < 30% moisture |
 | Light Level | LDR | MCP3204 CH3 (analog) | Day/Night status |
-| Object/Motion | IR sensor | Direct GPIO (digital) | Object detected |
+| Climate-Change | RAIN sensor | MCP3204(analog) | YES/NO |
 
-Since the LPC2129 has no built-in ADC, all analog sensors are read through an external **MCP3204** 12-bit SPI ADC. The IR sensor outputs a clean digital HIGH/LOW, so it's read directly on a GPIO pin — no ADC channel needed.
+Since the LPC2129 has no built-in ADC, all analog sensors are read through an external **MCP3204** 12-bit SPI ADC. The RAIN sensor outputs a clean digital HIGH/LOW, so it's read directly on a GPIO pin — no ADC channel needed.
 
-**Normal operation:** the LCD cycles between two screens — Temperature/IR status, and Soil Moisture %/Day-Night — updating every few seconds.
+**Normal operation:** the LCD cycles between two screens — Temperature/RAIN status, and Soil Moisture %/Day-Night — updating every few seconds.
 
 **On threshold breach:** the onboard LED activates immediately, and the system sends a formatted SMS (via SIM800C over UART0, using standard AT commands) to a configured mobile number with the live readings and a "Take Necessary Action" prompt.
 
@@ -56,7 +57,7 @@ Since the LPC2129 has no built-in ADC, all analog sensors are read through an ex
 - LM35 temperature sensor
 - Soil moisture sensor (analog)
 - LDR (light dependent resistor)
-- IR sensor (digital output)
+- RAIN sensor (analog)
 - 16x2 character LCD
 - SIM800C GSM module
 - LED (local alert indicator)
@@ -74,7 +75,7 @@ Since the LPC2129 has no built-in ADC, all analog sensors are read through an ex
 | LCD Data (D0-D7) | P0.8 - P0.15 |
 | LCD RS | P0.16 |
 | LCD EN | P0.18 |
-| IR Sensor Output | P0.17 |
+| RAIN Sensor Output | P0.17 |
 | LED | P1.16 |
 
 ## Firmware Structure
