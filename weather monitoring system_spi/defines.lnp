@@ -1,0 +1,4 @@
+--cpu ARM7TDMI "startup.o" "gsm.o" "main.o" "mcp3204.o" "spi.o" "uart.o" --strict --scatter "defines.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\defines.map" -o "defines.axf"

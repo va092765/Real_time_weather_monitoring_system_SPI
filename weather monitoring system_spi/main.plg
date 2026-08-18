@@ -1,0 +1,78 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\v25ce7v2\weather monitoring system_spi\main.uvproj
+Project File Date:  08/13/2026
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling Startup.s...
+compiling main.c...
+main.c(30): error:  #20: identifier "LCD_DATA_MASK" is undefined
+main.c:       IOCLR1 = LCD_DATA_MASK;
+main.c:                ^
+main.c(33): error:  #20: identifier "RW" is undefined
+main.c:       IOCLR1 = RW;
+main.c:                ^
+main.c(42): error:  #20: identifier "LCD_DATA_MASK" is undefined
+main.c:       IOCLR1 = LCD_DATA_MASK;
+main.c:                ^
+main.c(45): error:  #20: identifier "RW" is undefined
+main.c:       IOCLR1 = RW;
+main.c:                ^
+main.c(54): error:  #20: identifier "LCD_DATA_MASK" is undefined
+main.c:       IODIR1 |= (LCD_DATA_MASK | RS | RW | EN);
+main.c:                  ^
+main.c(54): error:  #20: identifier "RW" is undefined
+main.c:       IODIR1 |= (LCD_DATA_MASK | RS | RW | EN);
+main.c:                                       ^
+main.c(96): warning:  #550-D: variable "b0" was set but never used
+main.c:       unsigned char b0, b1, b2;
+main.c:                     ^
+main.c(175): error:  #20: identifier "PLL0CON" is undefined
+main.c:       PLL0CON = 0x01; PLL0CFG = 0x24; PLL0FEED = 0xAA; PLL0FEED = 0x55;
+main.c:       ^
+main.c(175): error:  #20: identifier "PLL0CFG" is undefined
+main.c:       PLL0CON = 0x01; PLL0CFG = 0x24; PLL0FEED = 0xAA; PLL0FEED = 0x55;
+main.c:                       ^
+main.c(175): error:  #20: identifier "PLL0FEED" is undefined
+main.c:       PLL0CON = 0x01; PLL0CFG = 0x24; PLL0FEED = 0xAA; PLL0FEED = 0x55;
+main.c:                                       ^
+main.c(176): error:  #20: identifier "PLL0STAT" is undefined
+main.c:       while (!(PLL0STAT & (1 << 10)));
+main.c:                ^
+main.c(260): warning:  #1-D: last line of file ends without a newline
+main.c:   }
+main.c:    ^
+main.c: main.c: 2 warnings, 10 errors
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(41): error:  #20: identifier "LCD_DATA_MASK" is undefined
+main.c:       IOSET0 = ((unsigned int)data << 16) & LCD_DATA_MASK;
+main.c:                                             ^
+main.c(50): error:  #20: identifier "RW" is undefined
+main.c:       IODIR0 |= (LCD_DATA | RS | RW | EN);
+main.c:                                  ^
+main.c(99): warning:  #550-D: variable "b0" was set but never used
+main.c:       unsigned char b0, b1, b2;
+main.c:                     ^
+main.c(190): error:  #20: identifier "PLL0CON" is undefined
+main.c:       PLL0CON = 0x01; PLL0CFG = 0x24; PLL0FEED = 0xAA; PLL0FEED = 0x55;
+main.c:       ^
+main.c(190): error:  #20: identifier "PLL0CFG" is undefined
+main.c:       PLL0CON = 0x01; PLL0CFG = 0x24; PLL0FEED = 0xAA; PLL0FEED = 0x55;
+main.c:                       ^
+main.c(190): error:  #20: identifier "PLL0FEED" is undefined
+main.c:       PLL0CON = 0x01; PLL0CFG = 0x24; PLL0FEED = 0xAA; PLL0FEED = 0x55;
+main.c:                                       ^
+main.c(191): error:  #20: identifier "PLL0STAT" is undefined
+main.c:       while (!(PLL0STAT & (1 << 10)));
+main.c:                ^
+main.c(275): warning:  #1-D: last line of file ends without a newline
+main.c:   }
+main.c:    ^
+main.c: main.c: 2 warnings, 6 errors
+Target not created
