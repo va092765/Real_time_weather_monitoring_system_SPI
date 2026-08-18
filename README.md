@@ -22,7 +22,7 @@ flowchart TB
     IR -->|GPIO P0.17| MCU
 
     MCU -->|8-bit Data + RS/EN| LCD["16x2 LCD\nLive Readings"]
-    MCU -->|GPIO P1.16| ALERT["Buzzer / LED\nLocal Alert"]
+    MCU -->|GPIO P1.16| ALERT["LED\nLocal Alert"]
     MCU <-->|UART0 @ 9600 baud| GSM["SIM800C GSM Module"]
     GSM -->|SMS| PHONE["User's Mobile Phone"]
 
