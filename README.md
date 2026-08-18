@@ -1,6 +1,6 @@
 # Real-Time Weather Monitoring System with SMS Alerts
 
-An embedded weather station built on the **LPC2129 (ARM7TDMI-S)** microcontroller. It continuously monitors temperature, soil moisture, IR-based object/proximity detection, and ambient light level, displays live readings on a 16x2 LCD, and sends an SMS alert via GSM whenever any parameter crosses a critical threshold.
+An embedded weather station built on the **LPC2129 (ARM7TDMI-S)** microcontroller. It continuously monitors temperature, soil moisture, Rain-sensors for climate change detection, and ambient light level, displays live readings on a 16x2 LCD, and sends an SMS alert via GSM whenever any parameter crosses a critical threshold.
 
 ## Block Diagram
 
@@ -12,7 +12,7 @@ flowchart TB
         LDR["LDR\nLight Sensor"]
     end
 
-    IR["IR Sensor\n(Digital HIGH/LOW)"]
+    IR["RAIN Sensor\n(Digital HIGH/LOW)"]
 
     LM35 -->|CH0| ADC["MCP3204\n12-bit SPI ADC"]
     SOIL -->|CH2| ADC
