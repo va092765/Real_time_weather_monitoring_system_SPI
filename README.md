@@ -10,7 +10,7 @@ flowchart TB
         LM35["LM35\nTemperature Sensor"]
         SOIL["Soil Moisture\nSensor"]
         LDR["LDR\nLight Sensor"]
-        FC-37["RAIN Sensor\n"]
+        FC-37["FC-37\nRAIN Sensor\n"]
     end
 
     LM35 -->|CH0| ADC["MCP3204\n12-bit SPI ADC"]
