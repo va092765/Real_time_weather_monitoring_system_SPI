@@ -12,7 +12,7 @@ flowchart TB
         LDR["LDR\nLight Sensor"]
     end
 
-    IR["RAIN Sensor\n(Digital HIGH/LOW)"]
+    IR["RAIN Sensor\n(Analog)"]
 
     LM35 -->|CH0| ADC["MCP3204\n12-bit SPI ADC"]
     SOIL -->|CH2| ADC
