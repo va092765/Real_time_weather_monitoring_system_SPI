@@ -20,7 +20,7 @@ flowchart TB
 
 
     ADC <-->|SPI0: SCK / MISO / MOSI / CS| MCU["LPC2129\nARM7 Microcontroller"]
-    IR -->|GPIO P0.17| MCU
+
 
     MCU -->|8-bit Data + RS/EN| LCD["16x2 LCD\nLive Readings"]
     MCU -->|GPIO P1.16| ALERT["LED\nLocal Alert"]
