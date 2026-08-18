@@ -91,4 +91,4 @@ defines.h     - bit manipulation macros
 spi_defines.h - SPI register bit definitions
 ```
 
-Built and tested in Keil µVision4 with 0 errors, 0 warnings.
+Built and tested in Keil µVision4.
