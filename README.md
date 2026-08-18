@@ -47,7 +47,7 @@ Since the LPC2129 has no built-in ADC, all analog sensors are read through an ex
 
 **Normal operation:** the LCD cycles between two screens — Temperature/IR status, and Soil Moisture %/Day-Night — updating every few seconds.
 
-**On threshold breach:** the onboard buzzer/LED activates immediately, and the system sends a formatted SMS (via SIM800C over UART0, using standard AT commands) to a configured mobile number with the live readings and a "Take Necessary Action" prompt.
+**On threshold breach:** the onboard LED activates immediately, and the system sends a formatted SMS (via SIM800C over UART0, using standard AT commands) to a configured mobile number with the live readings and a "Take Necessary Action" prompt.
 
 ## Hardware Used
 
@@ -75,7 +75,7 @@ Since the LPC2129 has no built-in ADC, all analog sensors are read through an ex
 | LCD RS | P0.16 |
 | LCD EN | P0.18 |
 | IR Sensor Output | P0.17 |
-| Buzzer / LED | P1.16 |
+| LED | P1.16 |
 
 ## Firmware Structure
 
