@@ -42,7 +42,7 @@ The system reads four environmental parameters and reacts to abnormal conditions
 | Temperature | LM35 | MCP3204 CH0 (analog) | > 40°C |
 | Soil Moisture | Resistive soil sensor | MCP3204 CH2 (analog) | < 30% moisture |
 | Light Level | LDR | MCP3204 CH3 (analog) | Day/Night status |
-| Climate-Change | RAIN sensor | MCP3204(analog) | YES/NO |
+| Climate-Change | FC-37 sensor | MCP3204(analog) | YES/NO |
 
 Since the LPC2129 has no built-in ADC, all analog sensors are read through an external **MCP3204** 12-bit SPI ADC. The RAIN sensor outputs a clean digital HIGH/LOW, so it's read directly on a GPIO pin — no ADC channel needed.
 
@@ -57,7 +57,7 @@ Since the LPC2129 has no built-in ADC, all analog sensors are read through an ex
 - LM35 temperature sensor
 - Soil moisture sensor (analog)
 - LDR (light dependent resistor)
-- RAIN sensor (analog)
+- FC-37 (analog)
 - 16x2 character LCD
 - SIM800C GSM module
 - LED (local alert indicator)
